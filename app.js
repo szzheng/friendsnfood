@@ -21,7 +21,8 @@ var task = require('./routes/task');
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'instatask';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
+// var database_uri = process.env.MONGOLAB_URI || local_database_uri
+var database_uri = "mongodb://<dbuser>:<dbpassword>@ds013918.mongolab.com:13918/heroku_x69dbwmd?authMode=scram-sha1"
 mongoose.connect(database_uri);
 
 var app = express();
